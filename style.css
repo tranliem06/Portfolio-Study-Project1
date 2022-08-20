@@ -21,6 +21,33 @@ a {
   justify-content: center;
 }
 
+p {
+  color: #000;
+  font-size: 1.4rem;
+  line-height: 2.5;
+  margin-top: 5px;
+  font-weight: 300;
+  letter-spacing: 0.05rem;
+}
+img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.section-title {
+  font-size: 4rem;
+  font-weight: 300;
+  color: #000;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  text-align: center;
+}
+
+.section-title span {
+  color: crimson;
+}
 /* ***************** */
 /* *****Hero section */
 /* ***************** */
@@ -113,7 +140,175 @@ a {
   color: #fff;
   background-color: crimson;
 }
+/* ***************** */
+/* *****Service section */
+/* ***************** */
 
+#services .services {
+  flex-direction: column;
+  text-align: center;
+  max-width: 150rem;
+  margin: 0 auto;
+  padding: 10rem 0;
+}
+
+#services .service-top p {
+  color: #000;
+  font-size: 1.4rem;
+  line-height: 2.5;
+  margin-top: 5px;
+  font-weight: 300;
+  letter-spacing: 0.05rem;
+}
+#services .service-bottom {
+  margin-top: 5rem;
+  display: flex;
+  /* gap: 3rem; */
+  /* flex-direction: column; */
+  /* 
+  allow the item to automatically start a new line when the container size change */
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+#services .service-item {
+  flex-basis: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 3rem;
+
+  border-radius: 10px;
+  background-image: url(./img/img-1.png);
+  background-size: cover;
+  margin: 10px 5%;
+
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+#services .service-item::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+
+  opacity: 0.8;
+  z-index: -1;
+}
+
+#services .service-bottom .icon {
+  height: 8rem;
+  width: 8rem;
+  margin-bottom: 20px;
+}
+
+#services .service-item h2 {
+  font-size: 2rem;
+  color: #fff;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+#services .service-item p {
+  font-size: 1.4rem;
+  color: #fff;
+  text-align-last: left;
+  line-height: 1.9;
+}
+
+/* ***************** */
+/* *****Projects section */
+/* ***************** */
+#projects .projects {
+  flex-direction: column;
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 10rem 0;
+}
+
+#projects .projects-header h1 {
+  margin-bottom: 50px;
+}
+
+#projects .all-projects {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#projects .project-item {
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
+  flex-direction: column;
+  width: 80%;
+  /* height: 800px; */
+  margin: 20px auto;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+#projects .project-info {
+  padding: 30px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-basis: 50%;
+  background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+  color: #fff;
+}
+
+#projects .project-info h1 {
+  font-size: 4rem;
+  font-weight: 500;
+}
+#projects .project-info h2 {
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin-top: 10px;
+}
+#projects .project-info p {
+  color: #fff;
+  margin-top: 3rem;
+  line-height: 1.5;
+}
+
+#projects .project-item .project-img {
+  flex-basis: 50%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+#projects .project-item .project-img img {
+  height: 300px;
+}
+
+#projects .project-img::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+  opacity: 0.7;
+}
+#projects .project-img img {
+  transition: 0.3s ease transform;
+  width: 100%;
+  height: 50%;
+}
+#projects .project-item:hover .project-img img {
+  transform: scale(1.1);
+}
 /* ************** */
 /* *****Keyframes */
 /* ************** */
@@ -144,7 +339,3 @@ a {
     font-weight: 500;
   }
 }
-
-/* ***************** */
-/* *****Service section */
-/* ***************** */
